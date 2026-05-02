@@ -12,4 +12,4 @@ engine = create_engine(
 
 sessionLocal = sessionmaker(autoflush=False, bind=engine, expire_on_commit=False)
 
-base = declarative_base()
+Base = declarative_base()

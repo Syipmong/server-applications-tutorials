@@ -4,8 +4,8 @@ class User(Base):
 
     __tablename__ = 'users'
 
-    id = Column(String, primary_key=True, index=True)
-    username = Column(String, unique=True, index=True)
+    id = Column(String, primary_key=True, index=True, autoincrement=True)
+    name = Column(String, unique=True, index=True)
     age = Column(Integer)
     phone = Column(String)
     email = Column(String, unique=True, index=True)

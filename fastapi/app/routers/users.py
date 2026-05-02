@@ -15,7 +15,7 @@ def get_db():
 
 
 class UserCreate(BaseModel):
-    username: str
+    name: str
     email: str
     phone: str
     age: int
@@ -32,7 +32,7 @@ def get_user(username: str, db: Session = Depends(get_db)):
 @router.post('/users/')
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db_user = models.User(
-        username = user.name,
+        name = user.name,
         age = user.age,
         email = user.email,
         phone = user.phone,
